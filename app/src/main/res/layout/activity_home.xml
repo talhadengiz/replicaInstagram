@@ -14,10 +14,8 @@
 
         <com.google.android.material.appbar.AppBarLayout
             android:id="@+id/appbar"
-
             android:layout_width="0dp"
             android:layout_height="50dp"
-
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent">
@@ -78,7 +76,7 @@
                             android:id="@+id/shade"
                             android:layout_width="match_parent"
                             android:layout_height="2dp"
-                            android:background="@color/colorShape"
+                            android:background="@color/colorPrimary"
                             app:layout_constraintBottom_toBottomOf="parent"
                             app:layout_constraintEnd_toEndOf="parent"
                             app:layout_constraintStart_toEndOf="parent"
@@ -108,14 +106,15 @@
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent" />
 
-        <com.google.android.material.bottomnavigation.BottomNavigationView
+        <com.ittianyu.bottomnavigationviewex.BottomNavigationViewEx
             android:id="@+id/bottomNavigationView"
             android:layout_width="0dp"
             android:layout_height="50dp"
-            android:background="@color/colorPrimary"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
+            android:background="@color/colorPrimary"
+            app:itemIconTint="@color/selector_nav_item"
             app:menu="@menu/bottom_navigation_menu" />
 
 
