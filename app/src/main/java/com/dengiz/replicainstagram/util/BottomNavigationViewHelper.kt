@@ -85,3 +85,15 @@ class BottomNavigationViewHelper {
     }
 
 }
+
+fun setupNavigationView(
+    context: Context,
+    bottomNavigationViewEx: BottomNavigationViewEx,
+    item: Int
+) {
+    BottomNavigationViewHelper setupBottomNavigationView bottomNavigationViewEx
+    BottomNavigationViewHelper.setupNavigation(context, bottomNavigationViewEx)
+    val menu = bottomNavigationViewEx.menu
+    val menuItem = menu.getItem(item)
+    menuItem.isChecked = true
+}

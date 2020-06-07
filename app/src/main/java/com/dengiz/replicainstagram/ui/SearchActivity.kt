@@ -4,21 +4,14 @@ import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
 import com.dengiz.replicainstagram.R
 import com.dengiz.replicainstagram.enums.BottomItemTypes
-import com.dengiz.replicainstagram.util.BottomNavigationViewHelper
+import com.dengiz.replicainstagram.util.setupNavigationView
 import kotlinx.android.synthetic.main.activity_home.*
 
 class SearchActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_search)
-        setupNavigationView()
+        setContentView(R.layout.activity_home)
+        setupNavigationView(this, bottomNavigationView, BottomItemTypes.ITEM_SEARCH.id)
     }
 
-    private fun setupNavigationView() {
-        BottomNavigationViewHelper setupBottomNavigationView bottomNavigationView
-        BottomNavigationViewHelper.setupNavigation(this, bottomNavigationView)
-        val menu = bottomNavigationView.menu
-        val menuItem = menu.getItem(BottomItemTypes.ITEM_SEARCH.id)
-        menuItem.isChecked = true
-    }
 }
