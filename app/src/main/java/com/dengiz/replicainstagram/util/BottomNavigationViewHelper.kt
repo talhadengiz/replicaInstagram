@@ -4,7 +4,11 @@ import android.content.Context
 import android.content.Intent
 import android.view.MenuItem
 import com.dengiz.replicainstagram.R
-import com.dengiz.replicainstagram.ui.*
+import com.dengiz.replicainstagram.ui.HomeActivity
+import com.dengiz.replicainstagram.ui.NewsActivity
+import com.dengiz.replicainstagram.ui.SearchActivity
+import com.dengiz.replicainstagram.ui.ShareActivity
+import com.dengiz.replicainstagram.ui.profile.ProfileActivity
 import com.google.android.material.bottomnavigation.BottomNavigationView
 import com.google.android.material.bottomnavigation.LabelVisibilityMode
 import com.ittianyu.bottomnavigationviewex.BottomNavigationViewEx
