@@ -21,11 +21,17 @@ class ProfileSettingsActivity : AppCompatActivity() {
         fragmentNavigations()
     }
 
+    override fun onBackPressed() {
+        constraitProfileSettings.visibility = View.VISIBLE
+        super.onBackPressed()
+    }
+
     private fun fragmentNavigations() {
         tvProfileEdit.setOnClickListener {
             constraitProfileSettings.visibility = View.GONE
             val transaction = supportFragmentManager.beginTransaction()
             transaction.replace(R.id.profileSettingsContainer, ProfileEditFragment())
+            transaction.addToBackStack("profileEditFragmentAdded")
             transaction.commit()
         }
     }

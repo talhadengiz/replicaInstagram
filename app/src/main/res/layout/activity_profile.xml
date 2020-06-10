@@ -6,180 +6,201 @@
     android:layout_height="match_parent"
     tools:context=".ui.profile.ProfileActivity">
 
-    <TextView
-        android:id="@+id/tvAccountName"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="16dp"
-        android:textColor="#000"
-        android:textSize="18sp"
-        app:layout_constraintBottom_toBottomOf="@+id/imgViewProfileSettings"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/imgViewProfileSettings"
-        tools:text="İsmail Talha" />
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/containerActivityProfile"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
 
-    <ImageView
-        android:id="@+id/imgViewProfileSettings"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="8dp"
-        android:layout_marginEnd="8dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/ic_profile_settings" />
+        <TextView
+            android:id="@+id/tvAccountName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:textColor="#000"
+            android:textSize="18sp"
+            app:layout_constraintBottom_toBottomOf="@+id/imgViewProfileSettings"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/imgViewProfileSettings"
+            tools:text="İsmail Talha" />
 
-    <ImageView
-        android:id="@+id/imgViewDiscoveryPerson"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginEnd="16dp"
-        app:layout_constraintBottom_toBottomOf="@+id/imgViewProfileSettings"
-        app:layout_constraintEnd_toStartOf="@+id/imgViewProfileSettings"
-        app:layout_constraintTop_toTopOf="@+id/imgViewProfileSettings"
-        app:srcCompat="@drawable/ic_discovery_person" />
+        <ImageView
+            android:id="@+id/imgViewProfileSettings"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="8dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@drawable/ic_profile_settings" />
 
-    <View
-        android:id="@+id/viewShapeProfile"
-        android:layout_width="0dp"
-        android:layout_height="2dp"
-        android:layout_marginTop="8dp"
-        android:background="@color/colorShape"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/imgViewDiscoveryPerson" />
+        <ImageView
+            android:id="@+id/imgViewDiscoveryPerson"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="16dp"
+            app:layout_constraintBottom_toBottomOf="@+id/imgViewProfileSettings"
+            app:layout_constraintEnd_toStartOf="@+id/imgViewProfileSettings"
+            app:layout_constraintTop_toTopOf="@+id/imgViewProfileSettings"
+            app:srcCompat="@drawable/ic_discovery_person" />
+
+        <View
+            android:id="@+id/viewShapeProfile"
+            android:layout_width="0dp"
+            android:layout_height="2dp"
+            android:layout_marginTop="8dp"
+            android:background="@color/colorShape"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/imgViewDiscoveryPerson" />
 
 
-    <de.hdodenhof.circleimageview.CircleImageView
-        android:id="@+id/imgProfilePhoto"
-        android:layout_width="96dp"
-        android:layout_height="96dp"
-        android:layout_marginStart="8dp"
-        android:layout_marginTop="16dp"
-        android:src="@drawable/ic_profile"
-        app:civ_border_color="@color/colorShape"
-        app:civ_border_width="1dp"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/viewShapeProfile" />
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/imgProfilePhoto"
+            android:layout_width="96dp"
+            android:layout_height="96dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="16dp"
+            android:src="@drawable/ic_profile"
+            app:civ_border_color="@color/colorShape"
+            app:civ_border_width="1dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/viewShapeProfile" />
 
-    <TextView
-        android:id="@+id/tvPostsCount"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="10"
-        android:textColor="@color/colorBlack"
-        android:textSize="18sp"
-        android:textStyle="bold"
-        app:layout_constraintEnd_toStartOf="@+id/tvFollowersCount"
-        app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintStart_toEndOf="@+id/imgProfilePhoto"
-        app:layout_constraintTop_toTopOf="@+id/imgProfilePhoto" />
+        <TextView
+            android:id="@+id/tvPostsCount"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="10"
+            android:textColor="@color/colorBlack"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toStartOf="@+id/tvFollowersCount"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toEndOf="@+id/imgProfilePhoto"
+            app:layout_constraintTop_toTopOf="@+id/imgProfilePhoto" />
 
-    <TextView
-        android:id="@+id/tvFollowersCount"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="123"
-        android:textColor="@color/colorBlack"
-        android:textSize="18sp"
-        android:textStyle="bold"
-        app:layout_constraintEnd_toStartOf="@+id/tvFollowingCount"
-        app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintStart_toEndOf="@+id/tvPostsCount"
-        app:layout_constraintTop_toTopOf="@+id/tvPostsCount" />
+        <TextView
+            android:id="@+id/tvFollowersCount"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="123"
+            android:textColor="@color/colorBlack"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toStartOf="@+id/tvFollowingCount"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toEndOf="@+id/tvPostsCount"
+            app:layout_constraintTop_toTopOf="@+id/tvPostsCount" />
 
-    <TextView
-        android:id="@+id/tvFollowingCount"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="321"
-        android:textColor="@color/colorBlack"
-        android:textSize="18sp"
-        android:textStyle="bold"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintStart_toEndOf="@+id/tvFollowersCount"
-        app:layout_constraintTop_toTopOf="@+id/tvFollowersCount" />
+        <TextView
+            android:id="@+id/tvFollowingCount"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="321"
+            android:textColor="@color/colorBlack"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toEndOf="@+id/tvFollowersCount"
+            app:layout_constraintTop_toTopOf="@+id/tvFollowersCount" />
 
-    <TextView
-        android:id="@+id/tvPosts"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Gönderiler"
-        android:textSize="12sp"
-        android:textStyle="bold"
-        app:layout_constraintEnd_toEndOf="@+id/tvPostsCount"
-        app:layout_constraintStart_toStartOf="@+id/tvPostsCount"
-        app:layout_constraintTop_toBottomOf="@+id/tvPostsCount" />
+        <TextView
+            android:id="@+id/tvPosts"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Gönderiler"
+            android:textSize="12sp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="@+id/tvPostsCount"
+            app:layout_constraintStart_toStartOf="@+id/tvPostsCount"
+            app:layout_constraintTop_toBottomOf="@+id/tvPostsCount" />
 
-    <TextView
-        android:id="@+id/tvFollowers"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Takipçi"
-        android:textSize="12sp"
-        android:textStyle="bold"
-        app:layout_constraintEnd_toEndOf="@+id/tvFollowersCount"
-        app:layout_constraintStart_toStartOf="@+id/tvFollowersCount"
-        app:layout_constraintTop_toBottomOf="@+id/tvFollowersCount" />
+        <TextView
+            android:id="@+id/tvFollowers"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Takipçi"
+            android:textSize="12sp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="@+id/tvFollowersCount"
+            app:layout_constraintStart_toStartOf="@+id/tvFollowersCount"
+            app:layout_constraintTop_toBottomOf="@+id/tvFollowersCount" />
 
-    <TextView
-        android:id="@+id/tvFollowing"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Takip"
-        android:textSize="12sp"
-        android:textStyle="bold"
-        app:layout_constraintEnd_toEndOf="@+id/tvFollowingCount"
-        app:layout_constraintStart_toStartOf="@+id/tvFollowingCount"
-        app:layout_constraintTop_toBottomOf="@+id/tvFollowingCount" />
+        <TextView
+            android:id="@+id/tvFollowing"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Takip"
+            android:textSize="12sp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="@+id/tvFollowingCount"
+            app:layout_constraintStart_toStartOf="@+id/tvFollowingCount"
+            app:layout_constraintTop_toBottomOf="@+id/tvFollowingCount" />
 
-    <Button
-        android:id="@+id/btnEditProfile"
-        style="?attr/materialButtonOutlinedStyle"
-        android:layout_width="0dp"
-        android:layout_height="28dp"
-        android:layout_marginStart="16dp"
-        android:layout_marginTop="28dp"
-        android:layout_marginEnd="16dp"
-        android:background="@color/colorPrimary"
-        android:text="Profili Düzenle"
-        app:layout_constraintBottom_toBottomOf="@+id/imgProfilePhoto"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/imgProfilePhoto"
-        app:layout_constraintTop_toBottomOf="@+id/tvPosts" />
+        <Button
+            android:id="@+id/btnEditProfile"
+            style="?attr/materialButtonOutlinedStyle"
+            android:layout_width="0dp"
+            android:layout_height="28dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="28dp"
+            android:layout_marginEnd="16dp"
+            android:background="@color/colorPrimary"
+            android:text="Profili Düzenle"
+            app:layout_constraintBottom_toBottomOf="@+id/imgProfilePhoto"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/imgProfilePhoto"
+            app:layout_constraintTop_toBottomOf="@+id/tvPosts" />
 
-    <TextView
-        android:id="@+id/tvProfileName"
-        android:layout_width="250dp"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="16dp"
-        android:layout_marginTop="16dp"
-        android:text="Talha Dengiz"
-        android:textColor="@color/colorBlack"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/btnEditProfile" />
+        <TextView
+            android:id="@+id/tvProfileName"
+            android:layout_width="250dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="16dp"
+            android:text="Talha Dengiz"
+            android:textColor="@color/colorBlack"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/btnEditProfile" />
 
-    <TextView
-        android:id="@+id/tvBiography"
-        android:layout_width="250dp"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="16dp"
-        android:layout_marginTop="4dp"
-        android:text="aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa"
-        android:textColor="@color/colorBlack"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/tvProfileName" />
+        <TextView
+            android:id="@+id/tvBiography"
+            android:layout_width="250dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="4dp"
+            android:text="aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa"
+            android:textColor="@color/colorBlack"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tvProfileName" />
 
-    <com.ittianyu.bottomnavigationviewex.BottomNavigationViewEx
-        android:id="@+id/bottomNavigationView"
-        android:layout_width="0dp"
-        android:layout_height="50dp"
-        android:background="@color/colorPrimary"
-        app:itemIconTint="@color/selector_nav_item"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:menu="@menu/bottom_navigation_menu" />
+        <com.ittianyu.bottomnavigationviewex.BottomNavigationViewEx
+            android:id="@+id/bottomNavigationView"
+            android:layout_width="0dp"
+            android:layout_height="50dp"
+            android:background="@color/colorPrimary"
+            app:itemIconTint="@color/selector_nav_item"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:menu="@menu/bottom_navigation_menu" />
+
+        <ProgressBar
+            android:id="@+id/progBarProfilePhoto"
+            style="?android:attr/progressBarStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintBottom_toBottomOf="@+id/imgProfilePhoto"
+            app:layout_constraintEnd_toEndOf="@+id/imgProfilePhoto"
+            app:layout_constraintStart_toStartOf="@+id/imgProfilePhoto"
+            app:layout_constraintTop_toTopOf="@+id/imgProfilePhoto" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <FrameLayout
+        android:id="@+id/frameEditProfile"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
